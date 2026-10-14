@@ -1,0 +1,94 @@
+<!doctype html><html><head><meta charset="utf-8"><title>BDNM bd-esa-laya</title>
+<style>body{font:14px system-ui;margin:16px;background:#fff;color:#222}pre.r{white-space:pre-wrap;background:#f6f6f6;padding:12px}
+.k span{margin-right:14px}</style></head><body>
+<h2>Essential self-adjointness of chi(xi) + chi&#x27;(eta) for the Bullough-Dodd S-matrix</h2>
+<div class="k"><span style="color:#2f7de1">━ winning path</span><span style="color:#d64545">┅ hard link</span>
+<span style="color:#4a9a4a">■ forward</span><span style="color:#d9822b">■ backward</span><span style="color:#8a5cd1">■ decoded waypoint</span></div>
+<pre class="mermaid">flowchart LR
+  S(["<b>S</b> Known for every n: chi_n(xi) = n P_n A_1^2 P_n and chi&#x27;_n(eta) = n P_n…"])
+  G(["<b>G</b> Proven: the sum chi_n(xi) + chi&#x27;_n(eta) is self-adjoint on the interse…"])
+  F1["<b>F1</b> Try Kato-Rellich: show chi&#x27;_n(eta) is relatively bounded by chi_n(xi) …"]
+  F2["<b>F2</b> Take the KLMN form sum of the two positive operators chi_n(xi) and chi…"]
+  F3["<b>F3</b> Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M)…"]
+  F4["<b>F4</b> Check whether chi_n(xi) and chi&#x27;_n(eta) strongly commute, so their sum…"]
+  F5["<b>F5</b> Apply Nelson&#x27;s commutator theorem with a comparison operator such as t…"]
+  B1["<b>B1</b> The sum T is a positive symmetric operator with Ran(T + 1) equal to al…"]
+  B2["<b>B2</b> For every f in H_n there are u_M with (Z_A + Z_{B,M} + 1) u_M = f and …"]
+  B3["<b>B3</b> The adjoint equation T* v = -v has only the solution v = 0"]
+  B4["<b>B4</b> The form sum of chi_n(xi) and chi&#x27;_n(eta) has operator domain equal to…"]
+  F6["<b>F6</b> No relative bound exists: both are unbounded analytic shifts in opposi…"]
+  F7["<b>F7</b> The form sum is a self-adjoint operator extending chi_n(xi) + chi&#x27;_n(e…"]
+  F8["<b>F8</b> Expand the cross term &lt;Z_A u, Z_{B,M} u&gt; over cosets of S_n: B acting …"]
+  F9["<b>F9</b> Bound the same-slot cross term by c ||A_1 u|| ||min(B_n, sqrt M) u|| u…"]
+  F10["<b>F10</b> They do not commute: the S-symmetrisation P_n couples slot 1 to slot n"]
+  B5["<b>B5</b> A positive symmetric operator T with Ran(T + 1) = H is self-adjoint"]
+  B6["<b>B6</b> Pass to weak limits as M goes to infinity: u_M converges to u in the d…"]
+  B7["<b>B7</b> 2 Re &lt;Z_A u, Z_{B,M} u&gt; is bounded below by -eps ||Z_A u||^2 - C ||u||…"]
+  B8["<b>B8</b> Show the form sum&#x27;s operator domain equals Dom chi_n(xi) intersected w…"]
+  S -->|0.55| F3
+  S -->|0.56| F4
+  S -->|0.59| F9
+  F1 -->|0.63| F6
+  F2 -->|0.77| F7
+  F3 -->|0.59| F9
+  F4 -->|0.69| F10
+  F8 -->|0.58| F9
+  F9 -->|0.55| B7
+  B7 -->|0.52| F3
+  B7 -->|0.52| B2
+  linkStyle 0 stroke:#2f7de1,stroke-width:4px
+  linkStyle 1 stroke:#999,stroke-width:1px
+  linkStyle 2 stroke:#999,stroke-width:1px
+  linkStyle 3 stroke:#999,stroke-width:1px
+  linkStyle 4 stroke:#999,stroke-width:1px
+  linkStyle 5 stroke:#999,stroke-width:1px
+  linkStyle 6 stroke:#999,stroke-width:1px
+  linkStyle 7 stroke:#999,stroke-width:1px
+  linkStyle 8 stroke:#999,stroke-width:1px
+  linkStyle 9 stroke:#999,stroke-width:1px
+  linkStyle 10 stroke:#999,stroke-width:1px
+  classDef s fill:#e8f0fe,stroke:#2f7de1
+  classDef f fill:#eef7ee,stroke:#4a9a4a
+  classDef b fill:#fdf1e6,stroke:#d9822b
+  classDef w fill:#f5eefc,stroke:#8a5cd1
+  class S,G s
+  class F1,F2,F3,F4,F5,F6,F7,F8,F9,F10 f
+  class B1,B2,B3,B4,B5,B6,B7,B8 b</pre><pre class="r"># bd-esa-laya
+
+**Problem:** Essential self-adjointness of chi(xi) + chi&#x27;(eta) for the Bullough-Dodd S-matrix
+
+- S: Known for every n: chi_n(xi) = n P_n A_1^2 P_n and chi&#x27;_n(eta) = n P_n B_n^2 P_n are each positive self-adjoint on H_n intersected with Dom(A_1^2), resp. Dom(B_n^2) (Theorem A_n), and AB is bounded (Tanimoto)
+- G: Proven: the sum chi_n(xi) + chi&#x27;_n(eta) is self-adjoint on the intersection of their domains for every n, so (HA-T) holds for the Bullough-Dodd S-matrix at B = 1/2
+
+20 nodes, 91 edges scored, 85 usable (p &gt;= 0.341); judge: tuned Laya: raw scores, forward-consistent edges, top half usable
+
+## Best paths (product of edge probabilities)
+
+1. **0.2612**  S -&gt; F3 -&gt; G
+2. **0.0824**  S -&gt; F9 -&gt; B7 -&gt; F3 -&gt; G
+3. **0.0155**  S -&gt; F4 -&gt; F10 -&gt; F8 -&gt; F9 -&gt; B7 -&gt; F3 -&gt; G
+
+## Winning path, step by step
+
+- `S` Known for every n: chi_n(xi) = n P_n A_1^2 P_n and chi&#x27;_n(eta) = n P_n B_n^2 P_n are each positive self-adjoint on H_n intersected with Dom(A_1^2), resp. Dom(B_n^2) (Theorem A_n), and AB is bounded (Tanimoto)
+  - p=0.548
+- `F3` Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M), so Z_A + Z_{B,M} is self-adjoint by bounded perturbation
+  - p=0.477 **HARD** (low p)
+- `G` Proven: the sum chi_n(xi) + chi&#x27;_n(eta) is self-adjoint on the intersection of their domains for every n, so (HA-T) holds for the Bullough-Dodd S-matrix at B = 1/2
+
+## Strongest alternative waypoints (best path through node / best path)
+
+- 1.00  `F3` Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M), so Z_A + Z_{B,M} is self-adjoint by bounded perturbation
+- 0.94  `B4` The form sum of chi_n(xi) and chi&#x27;_n(eta) has operator domain equal to the intersection of their domains
+- 0.32  `F9` Bound the same-slot cross term by c ||A_1 u|| ||min(B_n, sqrt M) u|| using that AB is bounded
+- 0.32  `B7` 2 Re &lt;Z_A u, Z_{B,M} u&gt; is bounded below by -eps ||Z_A u||^2 - C ||u||^2, uniformly in M
+- 0.27  `F4` Check whether chi_n(xi) and chi&#x27;_n(eta) strongly commute, so their sum is self-adjoint by joint spectral calculus
+- 0.23  `F2` Take the KLMN form sum of the two positive operators chi_n(xi) and chi&#x27;_n(eta)
+- 0.22  `B2` For every f in H_n there are u_M with (Z_A + Z_{B,M} + 1) u_M = f and bounds on ||Z_A u_M|| and ||Z_{B,M} u_M|| uniform in M
+- 0.22  `B6` Pass to weak limits as M goes to infinity: u_M converges to u in the domain with (T + 1) u = f
+
+## Hard links to decode
+
+- `bdnm.py bridge bd-esa-laya F3 G`</pre>
+<script type="module">import m from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+m.initialize({startOnLoad:true,maxTextSize:500000,flowchart:{htmlLabels:true}});</script></body></html>

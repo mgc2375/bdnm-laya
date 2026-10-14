@@ -1,0 +1,50 @@
+{
+ "F11->F13": {
+  "p": 0.75,
+  "gap": "adds the one-particle modular computation (P1)"
+ },
+ "F13->F14": {
+  "p": 0.85,
+  "gap": "Borchers' theorem; boost sign fixed on H_1"
+ },
+ "F14->F15": {
+  "p": 0.8,
+  "gap": "Q2 Thm Q2.4 fixed-point lemma (Duell Thm 7) plus AC"
+ },
+ "F15->B1": {
+  "p": 0.95,
+  "gap": ""
+ },
+ "F15->G": {
+  "p": 0.9,
+  "gap": "wedge duality from P1 Prop 6.2"
+ },
+ "F15->B3": {
+  "p": 0.9,
+  "gap": ""
+ },
+ "F13->G": {
+  "p": 0.1,
+  "gap": "hypotheses of the fixed-point lemma not yet checked"
+ },
+ "F14->G": {
+  "p": 0.3,
+  "gap": "fixed-point lemma still to apply"
+ },
+ "S->F13": {
+  "p": 0.2,
+  "gap": "AC is the hard part"
+ },
+ "F7->F13": {
+  "p": 0.2,
+  "gap": "AC missing"
+ },
+ "F13->B1": {
+  "p": 0.3,
+  "gap": ""
+ },
+ "F14->B1": {
+  "p": 0.4,
+  "gap": "fixed-point lemma still to apply"
+ }
+}

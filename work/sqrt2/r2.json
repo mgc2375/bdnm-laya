@@ -1,0 +1,11 @@
+[
+ {"from":"F1","text":"Take p/q in lowest terms, so p and q share no common factor"},
+ {"from":"F1","text":"Square both sides to get p squared = 2 q squared"},
+ {"from":"F2","text":"Any rational root of x squared minus 2 must be an integer dividing 2: plus or minus 1 or 2"},
+ {"from":"F3","text":"Write p and q as products of primes and count the factors of 2 in p squared and in 2 q squared"},
+ {"from":"F4","text":"The digits of the square root of 2 never seem to repeat"},
+ {"from":"B1","text":"p and q are both shown to be even, contradicting lowest terms"},
+ {"from":"B2","text":"None of plus or minus 1 or 2 squares to 2"},
+ {"from":"B5","text":"p squared is even so p is even; writing p = 2k gives q squared = 2 k squared, so q is even too"},
+ {"from":"B4","text":"If q times root 2 is an integer p, then the smaller number p minus q also works"}
+]

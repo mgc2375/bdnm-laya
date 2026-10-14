@@ -1,0 +1,11 @@
+[
+ {"from":"S","text":"Try Kato-Rellich: show chi'_n(eta) is relatively bounded by chi_n(xi) with relative bound less than 1"},
+ {"from":"S","text":"Take the KLMN form sum of the two positive operators chi_n(xi) and chi'_n(eta)"},
+ {"from":"S","text":"Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M), so Z_A + Z_{B,M} is self-adjoint by bounded perturbation"},
+ {"from":"S","text":"Check whether chi_n(xi) and chi'_n(eta) strongly commute, so their sum is self-adjoint by joint spectral calculus"},
+ {"from":"S","text":"Apply Nelson's commutator theorem with a comparison operator such as the n-particle number or dilation generator"},
+ {"from":"G","side":"bwd","text":"The sum T is a positive symmetric operator with Ran(T + 1) equal to all of H_n"},
+ {"from":"G","side":"bwd","text":"For every f in H_n there are u_M with (Z_A + Z_{B,M} + 1) u_M = f and bounds on ||Z_A u_M|| and ||Z_{B,M} u_M|| uniform in M"},
+ {"from":"G","side":"bwd","text":"The adjoint equation T* v = -v has only the solution v = 0"},
+ {"from":"G","side":"bwd","text":"The form sum of chi_n(xi) and chi'_n(eta) has operator domain equal to the intersection of their domains"}
+]

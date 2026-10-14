@@ -1,0 +1,5 @@
+[
+ {"from":"F11","text":"Asymptotic completeness holds, and computing the modular data on H_1 gives U(0, -2 pi t) Delta_{M_T}^{-it} = J_{M_T} J = 1 on the one-particle space"},
+ {"from":"F16","text":"Asymptotic completeness holds, V(t) and I are 1 on H_1, and by Borchers' theorem V(t) and I fix Omega, commute with translations and map M_T into itself"},
+ {"from":"F17","text":"The fixed-point lemma makes V(t) and I fix every Haag-Ruelle scattering state; by asymptotic completeness these span H, so V(t) = I = 1 on all of H"}
+]

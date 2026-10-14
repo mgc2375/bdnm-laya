@@ -1,0 +1,11 @@
+[
+ {"from":"F1","text":"No relative bound exists: both are unbounded analytic shifts in opposite imaginary directions, so neither controls the other"},
+ {"from":"F2","text":"The form sum is a self-adjoint operator extending chi_n(xi) + chi'_n(eta) on the intersection domain"},
+ {"from":"F3","text":"Expand the cross term <Z_A u, Z_{B,M} u> over cosets of S_n: B acting on slots 2 to n commutes with A_1^2, giving a non-negative contribution"},
+ {"from":"F3","text":"Bound the same-slot cross term by c ||A_1 u|| ||min(B_n, sqrt M) u|| using that AB is bounded"},
+ {"from":"F4","text":"They do not commute: the S-symmetrisation P_n couples slot 1 to slot n"},
+ {"from":"B1","text":"A positive symmetric operator T with Ran(T + 1) = H is self-adjoint"},
+ {"from":"B2","text":"Pass to weak limits as M goes to infinity: u_M converges to u in the domain with (T + 1) u = f"},
+ {"from":"B2","text":"2 Re <Z_A u, Z_{B,M} u> is bounded below by -eps ||Z_A u||^2 - C ||u||^2, uniformly in M"},
+ {"from":"B4","text":"Show the form sum's operator domain equals Dom chi_n(xi) intersected with Dom chi'_n(eta)"}
+]

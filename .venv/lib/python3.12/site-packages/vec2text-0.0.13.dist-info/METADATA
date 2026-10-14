@@ -1,0 +1,26 @@
+Metadata-Version: 2.2
+Name: vec2text
+Version: 0.0.13
+Summary: convert embedding vectors back to text
+Author: Jack Morris
+Author-email: jxm3@cornell.edu
+License-File: LICENSE
+Requires-Dist: accelerate
+Requires-Dist: bert_score
+Requires-Dist: datasets
+Requires-Dist: einops
+Requires-Dist: evaluate
+Requires-Dist: openai
+Requires-Dist: optimum
+Requires-Dist: pre-commit
+Requires-Dist: rouge_score
+Requires-Dist: sacrebleu
+Requires-Dist: sentence_transformers
+Requires-Dist: tenacity
+Requires-Dist: tokenizers
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

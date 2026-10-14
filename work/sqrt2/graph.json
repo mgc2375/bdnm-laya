@@ -1,0 +1,180 @@
+{
+ "problem": "Prove that the square root of 2 is irrational",
+ "nodes": {
+  "S": {
+   "text": "I know the definitions of rational and irrational numbers and basic facts about integers",
+   "side": "start",
+   "depth": 0
+  },
+  "G": {
+   "text": "Proven: the square root of 2 is irrational",
+   "side": "goal",
+   "depth": 0
+  },
+  "F1": {
+   "text": "Assume for contradiction that the square root of 2 equals p/q with p and q integers and q not zero",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F2": {
+   "text": "Recall the rational root theorem for polynomials with integer coefficients",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F3": {
+   "text": "Recall the fundamental theorem of arithmetic: every integer has a unique prime factorisation",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F4": {
+   "text": "Compute the decimal expansion of the square root of 2 to many digits",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F5": {
+   "text": "Note that 1.4 squared is less than 2 and 1.5 squared is more than 2",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "B1": {
+   "text": "A contradiction follows from assuming the square root of 2 is p/q in lowest terms",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B2": {
+   "text": "The equation x squared minus 2 equals 0 has no rational roots",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B3": {
+   "text": "In p squared = 2 q squared, the prime 2 appears an even number of times on the left and an odd number of times on the right",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B4": {
+   "text": "There is no smallest positive integer q for which q times the square root of 2 is an integer",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "F6": {
+   "text": "Take p/q in lowest terms, so p and q share no common factor",
+   "side": "fwd",
+   "parent": "F1",
+   "depth": 2
+  },
+  "F7": {
+   "text": "Square both sides to get p squared = 2 q squared",
+   "side": "fwd",
+   "parent": "F1",
+   "depth": 2
+  },
+  "F8": {
+   "text": "Any rational root of x squared minus 2 must be an integer dividing 2: plus or minus 1 or 2",
+   "side": "fwd",
+   "parent": "F2",
+   "depth": 2
+  },
+  "F9": {
+   "text": "Write p and q as products of primes and count the factors of 2 in p squared and in 2 q squared",
+   "side": "fwd",
+   "parent": "F3",
+   "depth": 2
+  },
+  "F10": {
+   "text": "The digits of the square root of 2 never seem to repeat",
+   "side": "fwd",
+   "parent": "F4",
+   "depth": 2
+  },
+  "B5": {
+   "text": "p and q are both shown to be even, contradicting lowest terms",
+   "side": "bwd",
+   "parent": "B1",
+   "depth": 2
+  },
+  "B6": {
+   "text": "None of plus or minus 1 or 2 squares to 2",
+   "side": "bwd",
+   "parent": "B2",
+   "depth": 2
+  },
+  "B7": {
+   "text": "p squared is even so p is even; writing p = 2k gives q squared = 2 k squared, so q is even too",
+   "side": "bwd",
+   "parent": "B5",
+   "depth": 3
+  },
+  "B8": {
+   "text": "If q times root 2 is an integer p, then the smaller number p minus q also works",
+   "side": "bwd",
+   "parent": "B4",
+   "depth": 2
+  }
+ },
+ "edges": {
+  "S->F1": {
+   "kind": "tree"
+  },
+  "S->F2": {
+   "kind": "tree"
+  },
+  "S->F3": {
+   "kind": "tree"
+  },
+  "S->F4": {
+   "kind": "tree"
+  },
+  "S->F5": {
+   "kind": "tree"
+  },
+  "B1->G": {
+   "kind": "tree"
+  },
+  "B2->G": {
+   "kind": "tree"
+  },
+  "B3->G": {
+   "kind": "tree"
+  },
+  "B4->G": {
+   "kind": "tree"
+  },
+  "F1->F6": {
+   "kind": "tree"
+  },
+  "F1->F7": {
+   "kind": "tree"
+  },
+  "F2->F8": {
+   "kind": "tree"
+  },
+  "F3->F9": {
+   "kind": "tree"
+  },
+  "F4->F10": {
+   "kind": "tree"
+  },
+  "B5->B1": {
+   "kind": "tree"
+  },
+  "B6->B2": {
+   "kind": "tree"
+  },
+  "B7->B5": {
+   "kind": "tree"
+  },
+  "B8->B4": {
+   "kind": "tree"
+  }
+ },
+ "bridges": {}
+}

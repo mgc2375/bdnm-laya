@@ -1,0 +1,12 @@
+[
+ {"from":"F1","text":"So U(0, -2 pi t) Delta_{M_T}^{-it} and J_{M_T} J both act as the identity on the one-particle space H_1"},
+ {"from":"F2","text":"Created two-particle ZF vectors are never in the domain of chi'_2 because of the kinematic pole of S at i pi/3, so no product of three fields has Omega in its domain"},
+ {"from":"F3","text":"Check the hypotheses: those theorems need energy or particle-number bounds on the fields"},
+ {"from":"F4","text":"Check the hypotheses: Mund's theorem needs a local net on double cones"},
+ {"from":"F5","text":"The Moller operators are unitary onto H, so the wedge-local net is asymptotically complete"},
+ {"from":"F6","text":"The numerical agreement holds to round-off at degrees 4 and 5"},
+ {"from":"B1","text":"Any unitary W that fixes Omega, commutes with translations, maps M_T into itself and is the identity on H_1 fixes every Haag-Ruelle in and out state"},
+ {"from":"B3","text":"By Borchers' theorem Delta_{M_T}^{it} and J_{M_T} have the right commutation relations with translations, so V(t) and I commute with translations and preserve M_T"},
+ {"from":"B2","text":"Show every vector of the form A Omega with A in M_T lies in the free domain Dom Delta_0^{1/2}"},
+ {"from":"B4","text":"Establish the split property for wedge inclusions M_T(x) in M_T at large distances"}
+]

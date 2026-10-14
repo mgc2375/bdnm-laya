@@ -1,0 +1,1440 @@
+{
+ "problem": "Essential self-adjointness of chi(xi) + chi'(eta) for the Bullough-Dodd S-matrix",
+ "nodes": {
+  "S": {
+   "text": "Known for every n: chi_n(xi) = n P_n A_1^2 P_n and chi'_n(eta) = n P_n B_n^2 P_n are each positive self-adjoint on H_n intersected with Dom(A_1^2), resp. Dom(B_n^2) (Theorem A_n), and AB is bounded (Tanimoto)",
+   "side": "start",
+   "depth": 0
+  },
+  "G": {
+   "text": "Proven: the sum chi_n(xi) + chi'_n(eta) is self-adjoint on the intersection of their domains for every n, so (HA-T) holds for the Bullough-Dodd S-matrix at B = 1/2",
+   "side": "goal",
+   "depth": 0
+  },
+  "F1": {
+   "text": "Try Kato-Rellich: show chi'_n(eta) is relatively bounded by chi_n(xi) with relative bound less than 1",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F2": {
+   "text": "Take the KLMN form sum of the two positive operators chi_n(xi) and chi'_n(eta)",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F3": {
+   "text": "Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M), so Z_A + Z_{B,M} is self-adjoint by bounded perturbation",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F4": {
+   "text": "Check whether chi_n(xi) and chi'_n(eta) strongly commute, so their sum is self-adjoint by joint spectral calculus",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F5": {
+   "text": "Apply Nelson's commutator theorem with a comparison operator such as the n-particle number or dilation generator",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "B1": {
+   "text": "The sum T is a positive symmetric operator with Ran(T + 1) equal to all of H_n",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B2": {
+   "text": "For every f in H_n there are u_M with (Z_A + Z_{B,M} + 1) u_M = f and bounds on ||Z_A u_M|| and ||Z_{B,M} u_M|| uniform in M",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B3": {
+   "text": "The adjoint equation T* v = -v has only the solution v = 0",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B4": {
+   "text": "The form sum of chi_n(xi) and chi'_n(eta) has operator domain equal to the intersection of their domains",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "F6": {
+   "text": "No relative bound exists: both are unbounded analytic shifts in opposite imaginary directions, so neither controls the other",
+   "side": "fwd",
+   "parent": "F1",
+   "depth": 2
+  },
+  "F7": {
+   "text": "The form sum is a self-adjoint operator extending chi_n(xi) + chi'_n(eta) on the intersection domain",
+   "side": "fwd",
+   "parent": "F2",
+   "depth": 2
+  },
+  "F8": {
+   "text": "Expand the cross term <Z_A u, Z_{B,M} u> over cosets of S_n: B acting on slots 2 to n commutes with A_1^2, giving a non-negative contribution",
+   "side": "fwd",
+   "parent": "F3",
+   "depth": 2
+  },
+  "F9": {
+   "text": "Bound the same-slot cross term by c ||A_1 u|| ||min(B_n, sqrt M) u|| using that AB is bounded",
+   "side": "fwd",
+   "parent": "F3",
+   "depth": 2
+  },
+  "F10": {
+   "text": "They do not commute: the S-symmetrisation P_n couples slot 1 to slot n",
+   "side": "fwd",
+   "parent": "F4",
+   "depth": 2
+  },
+  "B5": {
+   "text": "A positive symmetric operator T with Ran(T + 1) = H is self-adjoint",
+   "side": "bwd",
+   "parent": "B1",
+   "depth": 2
+  },
+  "B6": {
+   "text": "Pass to weak limits as M goes to infinity: u_M converges to u in the domain with (T + 1) u = f",
+   "side": "bwd",
+   "parent": "B2",
+   "depth": 2
+  },
+  "B7": {
+   "text": "2 Re <Z_A u, Z_{B,M} u> is bounded below by -eps ||Z_A u||^2 - C ||u||^2, uniformly in M",
+   "side": "bwd",
+   "parent": "B2",
+   "depth": 2
+  },
+  "B8": {
+   "text": "Show the form sum's operator domain equals Dom chi_n(xi) intersected with Dom chi'_n(eta)",
+   "side": "bwd",
+   "parent": "B4",
+   "depth": 2
+  }
+ },
+ "edges": {
+  "S->G": {
+   "kind": "link",
+   "p": 0.9301,
+   "raw": 0.9662,
+   "cos": 0.7253,
+   "claude_p": 0.02,
+   "gap": "the entire cross-term argument is missing; Theorem A_n gives each summand, not the sum"
+  },
+  "S->F1": {
+   "kind": "tree",
+   "p": 0.409,
+   "raw": 0.2474,
+   "cos": 0.6072,
+   "claude_p": 0.5,
+   "gap": ""
+  },
+  "S->F2": {
+   "kind": "tree",
+   "p": 0.957,
+   "raw": 0.9584,
+   "cos": 0.5637,
+   "claude_p": 0.7,
+   "gap": ""
+  },
+  "S->F3": {
+   "kind": "tree",
+   "p": 0.2516,
+   "raw": 0.2699,
+   "cos": 0.5236,
+   "claude_p": 0.85,
+   "gap": ""
+  },
+  "S->F4": {
+   "kind": "tree",
+   "p": 0.3376,
+   "raw": 0.3742,
+   "cos": 0.6175,
+   "claude_p": 0.5,
+   "gap": ""
+  },
+  "S->F5": {
+   "kind": "tree",
+   "p": 0.5208,
+   "raw": 0.3982,
+   "cos": 0.3448,
+   "claude_p": 0.4,
+   "gap": "no natural comparison operator identified"
+  },
+  "S->B1": {
+   "kind": "link",
+   "p": 0.5149,
+   "raw": 0.5512,
+   "cos": 0.4115
+  },
+  "S->B3": {
+   "kind": "link",
+   "p": 0.572,
+   "raw": 0.3647,
+   "cos": 0.3592
+  },
+  "S->B4": {
+   "kind": "link",
+   "p": 0.7909,
+   "raw": 0.9107,
+   "cos": 0.5897
+  },
+  "S->F6": {
+   "kind": "link",
+   "p": 0.5752,
+   "raw": 0.5531,
+   "cos": 0.3262
+  },
+  "S->F8": {
+   "kind": "link",
+   "p": 0.6883,
+   "raw": 0.6721,
+   "cos": 0.4324
+  },
+  "S->F9": {
+   "kind": "link",
+   "p": 0.7442,
+   "raw": 0.7228,
+   "cos": 0.4959
+  },
+  "S->F10": {
+   "kind": "link",
+   "p": 0.8341,
+   "raw": 0.8771,
+   "cos": 0.3224,
+   "claude_p": 0.4,
+   "gap": ""
+  },
+  "F1->F2": {
+   "kind": "link",
+   "p": 0.5553,
+   "raw": 0.1897,
+   "cos": 0.4876,
+   "claude_p": 0.4,
+   "gap": "a change of approach, not a consequence"
+  },
+  "F1->F3": {
+   "kind": "link",
+   "p": 0.5751,
+   "raw": 0.2122,
+   "cos": 0.4136
+  },
+  "F1->F5": {
+   "kind": "link",
+   "p": 0.6242,
+   "raw": 0.1547,
+   "cos": 0.259,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "F1->B1": {
+   "kind": "link",
+   "p": 0.5941,
+   "raw": 0.2346,
+   "cos": 0.1653
+  },
+  "F1->F6": {
+   "kind": "tree",
+   "p": 0.1949,
+   "raw": 0.0385,
+   "cos": 0.3952,
+   "claude_p": 0.8,
+   "gap": ""
+  },
+  "F1->F9": {
+   "kind": "link",
+   "p": 0.656,
+   "raw": 0.2362,
+   "cos": 0.3583,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F1->F10": {
+   "kind": "link",
+   "p": 0.5531,
+   "raw": 0.2412,
+   "cos": 0.1753
+  },
+  "F1->B5": {
+   "kind": "link",
+   "p": 0.62,
+   "raw": 0.308,
+   "cos": 0.1818,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "F1->B8": {
+   "kind": "link",
+   "p": 0.6173,
+   "raw": 0.2856,
+   "cos": 0.3516
+  },
+  "F2->G": {
+   "kind": "link",
+   "p": 0.6778,
+   "raw": 0.6899,
+   "cos": 0.558
+  },
+  "F2->F1": {
+   "kind": "link",
+   "p": 0.7359,
+   "raw": 0.3946,
+   "cos": 0.4876,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F2->F4": {
+   "kind": "link",
+   "p": 0.7643,
+   "raw": 0.652,
+   "cos": 0.5709,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F2->B1": {
+   "kind": "link",
+   "p": 0.5437,
+   "raw": 0.4043,
+   "cos": 0.4869
+  },
+  "F2->B4": {
+   "kind": "link",
+   "p": 0.5818,
+   "raw": 0.6488,
+   "cos": 0.6185,
+   "claude_p": 0.1,
+   "gap": "form-sum domain = intersection is equivalent to the goal itself"
+  },
+  "F2->F6": {
+   "kind": "link",
+   "p": 0.7476,
+   "raw": 0.5714,
+   "cos": 0.2087,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F2->F7": {
+   "kind": "tree",
+   "p": 0.7038,
+   "raw": 0.7495,
+   "cos": 0.6139,
+   "claude_p": 0.9,
+   "gap": ""
+  },
+  "F2->F8": {
+   "kind": "link",
+   "p": 0.6628,
+   "raw": 0.4732,
+   "cos": 0.4003
+  },
+  "F3->F1": {
+   "kind": "link",
+   "p": 0.6413,
+   "raw": 0.2072,
+   "cos": 0.4136
+  },
+  "F3->F4": {
+   "kind": "link",
+   "p": 0.5284,
+   "raw": 0.288,
+   "cos": 0.4527
+  },
+  "F3->F5": {
+   "kind": "link",
+   "p": 0.6835,
+   "raw": 0.288,
+   "cos": 0.3725
+  },
+  "F3->B2": {
+   "kind": "link",
+   "p": 0.6992,
+   "raw": 0.5556,
+   "cos": 0.5236,
+   "claude_p": 0.2,
+   "gap": "uniform-in-M bounds need the whole cross-term estimate"
+  },
+  "F3->B3": {
+   "kind": "link",
+   "p": 0.7073,
+   "raw": 0.2421,
+   "cos": 0.3612,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F3->F8": {
+   "kind": "tree",
+   "p": 0.6655,
+   "raw": 0.3624,
+   "cos": 0.5093,
+   "claude_p": 0.75,
+   "gap": ""
+  },
+  "F3->F9": {
+   "kind": "tree",
+   "p": 0.3913,
+   "raw": 0.1506,
+   "cos": 0.5163,
+   "claude_p": 0.7,
+   "gap": ""
+  },
+  "F3->B6": {
+   "kind": "link",
+   "p": 0.711,
+   "raw": 0.5375,
+   "cos": 0.3491,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F3->B7": {
+   "kind": "link",
+   "p": 0.7634,
+   "raw": 0.4673,
+   "cos": 0.6086,
+   "claude_p": 0.2,
+   "gap": "needs the coset expansion and the AB-bounded estimate"
+  },
+  "F4->G": {
+   "kind": "link",
+   "p": 0.8343,
+   "raw": 0.8234,
+   "cos": 0.6991,
+   "claude_p": 0.05,
+   "gap": "they do not strongly commute"
+  },
+  "F4->F1": {
+   "kind": "link",
+   "p": 0.5957,
+   "raw": 0.2318,
+   "cos": 0.491
+  },
+  "F4->F2": {
+   "kind": "link",
+   "p": 0.6806,
+   "raw": 0.4876,
+   "cos": 0.5709,
+   "claude_p": 0.3,
+   "gap": ""
+  },
+  "F4->B1": {
+   "kind": "link",
+   "p": 0.5265,
+   "raw": 0.3567,
+   "cos": 0.3656
+  },
+  "F4->F7": {
+   "kind": "link",
+   "p": 0.8487,
+   "raw": 0.8608,
+   "cos": 0.6509,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F4->F8": {
+   "kind": "link",
+   "p": 0.5339,
+   "raw": 0.3143,
+   "cos": 0.4328
+  },
+  "F4->F9": {
+   "kind": "link",
+   "p": 0.5901,
+   "raw": 0.3574,
+   "cos": 0.328
+  },
+  "F4->F10": {
+   "kind": "tree",
+   "p": 0.3781,
+   "raw": 0.2711,
+   "cos": 0.4069,
+   "claude_p": 0.9,
+   "gap": ""
+  },
+  "F5->F3": {
+   "kind": "link",
+   "p": 0.5275,
+   "raw": 0.2274,
+   "cos": 0.3725,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "F5->F4": {
+   "kind": "link",
+   "p": 0.5623,
+   "raw": 0.2654,
+   "cos": 0.3312,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "F5->B1": {
+   "kind": "link",
+   "p": 0.5123,
+   "raw": 0.2256,
+   "cos": 0.3126
+  },
+  "F5->B2": {
+   "kind": "link",
+   "p": 0.7067,
+   "raw": 0.5024,
+   "cos": 0.2588,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F5->B3": {
+   "kind": "link",
+   "p": 0.5352,
+   "raw": 0.106,
+   "cos": 0.1752
+  },
+  "F5->F6": {
+   "kind": "link",
+   "p": 0.5398,
+   "raw": 0.2045,
+   "cos": 0.2213
+  },
+  "F5->F8": {
+   "kind": "link",
+   "p": 0.6017,
+   "raw": 0.2516,
+   "cos": 0.2799
+  },
+  "F5->F9": {
+   "kind": "link",
+   "p": 0.6059,
+   "raw": 0.2483,
+   "cos": 0.2155
+  },
+  "F5->F10": {
+   "kind": "link",
+   "p": 0.6579,
+   "raw": 0.3955,
+   "cos": 0.2915,
+   "claude_p": 0.3,
+   "gap": ""
+  },
+  "F5->B6": {
+   "kind": "link",
+   "p": 0.5572,
+   "raw": 0.3165,
+   "cos": 0.2282
+  },
+  "F5->B7": {
+   "kind": "link",
+   "p": 0.7453,
+   "raw": 0.3826,
+   "cos": 0.1993,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B1->G": {
+   "kind": "tree",
+   "p": 0.2467,
+   "raw": 0.1526,
+   "cos": 0.4483,
+   "claude_p": 0.9,
+   "gap": "apply the range criterion (B5) and take the direct sum over n"
+  },
+  "B1->B2": {
+   "kind": "link",
+   "p": 0.8989,
+   "raw": 0.7992,
+   "cos": 0.4384,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B1->B3": {
+   "kind": "link",
+   "p": 0.8178,
+   "raw": 0.3305,
+   "cos": 0.4,
+   "claude_p": 0.9,
+   "gap": ""
+  },
+  "B1->F6": {
+   "kind": "link",
+   "p": 0.7359,
+   "raw": 0.3947,
+   "cos": 0.1866
+  },
+  "B1->F7": {
+   "kind": "link",
+   "p": 0.5158,
+   "raw": 0.4109,
+   "cos": 0.4121
+  },
+  "B1->F8": {
+   "kind": "link",
+   "p": 0.5204,
+   "raw": 0.205,
+   "cos": 0.3394
+  },
+  "B1->F9": {
+   "kind": "link",
+   "p": 0.5481,
+   "raw": 0.2177,
+   "cos": 0.3007
+  },
+  "B1->F10": {
+   "kind": "link",
+   "p": 0.5109,
+   "raw": 0.2751,
+   "cos": 0.3104
+  },
+  "B1->B5": {
+   "kind": "link",
+   "p": 0.7747,
+   "raw": 0.5702,
+   "cos": 0.8577,
+   "claude_p": 0.3,
+   "gap": "B5 is a lemma, not a consequence"
+  },
+  "B1->B6": {
+   "kind": "link",
+   "p": 0.5408,
+   "raw": 0.3164,
+   "cos": 0.3157
+  },
+  "B2->G": {
+   "kind": "tree",
+   "p": 0.5555,
+   "raw": 0.5568,
+   "cos": 0.4412,
+   "claude_p": 0.3,
+   "gap": "weak limits and the range criterion are missing"
+  },
+  "B2->F2": {
+   "kind": "link",
+   "p": 0.8552,
+   "raw": 0.7413,
+   "cos": 0.3395,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B2->F3": {
+   "kind": "link",
+   "p": 0.9039,
+   "raw": 0.8288,
+   "cos": 0.5236,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B2->F4": {
+   "kind": "link",
+   "p": 0.613,
+   "raw": 0.4653,
+   "cos": 0.3874
+  },
+  "B2->F5": {
+   "kind": "link",
+   "p": 0.6712,
+   "raw": 0.3678,
+   "cos": 0.2588
+  },
+  "B2->B1": {
+   "kind": "link",
+   "p": 0.7609,
+   "raw": 0.6328,
+   "cos": 0.4384,
+   "claude_p": 0.45,
+   "gap": "needs the weak-limit/closedness step"
+  },
+  "B2->F7": {
+   "kind": "link",
+   "p": 0.5804,
+   "raw": 0.6235,
+   "cos": 0.3149
+  },
+  "B2->F8": {
+   "kind": "link",
+   "p": 0.5198,
+   "raw": 0.3199,
+   "cos": 0.5165,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B2->F10": {
+   "kind": "link",
+   "p": 0.5101,
+   "raw": 0.4089,
+   "cos": 0.2888
+  },
+  "B2->B5": {
+   "kind": "link",
+   "p": 0.5215,
+   "raw": 0.4347,
+   "cos": 0.3734
+  },
+  "B2->B6": {
+   "kind": "link",
+   "p": 0.6958,
+   "raw": 0.6217,
+   "cos": 0.4859,
+   "claude_p": 0.85,
+   "gap": "closedness of Z_A, Z_B and weak compactness; Z_{B,M} u_M -> Z_B u needs the truncation limit"
+  },
+  "B3->G": {
+   "kind": "tree",
+   "p": 0.3292,
+   "raw": 0.1912,
+   "cos": 0.3593,
+   "claude_p": 0.75,
+   "gap": "gives essential self-adjointness; SA on the intersection itself needs closedness"
+  },
+  "B3->F3": {
+   "kind": "link",
+   "p": 0.6671,
+   "raw": 0.3307,
+   "cos": 0.3612,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B3->F5": {
+   "kind": "link",
+   "p": 0.5672,
+   "raw": 0.1518,
+   "cos": 0.1752
+  },
+  "B3->B1": {
+   "kind": "link",
+   "p": 0.6452,
+   "raw": 0.3206,
+   "cos": 0.4,
+   "claude_p": 0.4,
+   "gap": "gives dense range only"
+  },
+  "B3->F6": {
+   "kind": "link",
+   "p": 0.7257,
+   "raw": 0.3517,
+   "cos": 0.198,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B3->F8": {
+   "kind": "link",
+   "p": 0.5024,
+   "raw": 0.1737,
+   "cos": 0.2706
+  },
+  "B3->F9": {
+   "kind": "link",
+   "p": 0.569,
+   "raw": 0.2097,
+   "cos": 0.2562
+  },
+  "B3->F10": {
+   "kind": "link",
+   "p": 0.5841,
+   "raw": 0.3089,
+   "cos": 0.185
+  },
+  "B3->B5": {
+   "kind": "link",
+   "p": 0.792,
+   "raw": 0.5627,
+   "cos": 0.4351,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B3->B6": {
+   "kind": "link",
+   "p": 0.6159,
+   "raw": 0.3557,
+   "cos": 0.3413
+  },
+  "B4->G": {
+   "kind": "tree",
+   "p": 0.8006,
+   "raw": 0.8069,
+   "cos": 0.6786,
+   "claude_p": 0.85,
+   "gap": ""
+  },
+  "B4->F1": {
+   "kind": "link",
+   "p": 0.7336,
+   "raw": 0.388,
+   "cos": 0.4006
+  },
+  "B4->F2": {
+   "kind": "link",
+   "p": 0.7676,
+   "raw": 0.6239,
+   "cos": 0.6185,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B4->F4": {
+   "kind": "link",
+   "p": 0.5197,
+   "raw": 0.381,
+   "cos": 0.5544
+  },
+  "B4->F6": {
+   "kind": "link",
+   "p": 0.5747,
+   "raw": 0.3745,
+   "cos": 0.2477
+  },
+  "B4->F7": {
+   "kind": "link",
+   "p": 0.6583,
+   "raw": 0.7049,
+   "cos": 0.8004,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "B4->B8": {
+   "kind": "link",
+   "p": 0.9919,
+   "raw": 0.9878,
+   "cos": 0.8747,
+   "claude_p": 0.3,
+   "gap": "circular restatement"
+  },
+  "F6->F1": {
+   "kind": "link",
+   "p": 0.5731,
+   "raw": 0.2263,
+   "cos": 0.3952,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F6->F3": {
+   "kind": "link",
+   "p": 0.7408,
+   "raw": 0.5904,
+   "cos": 0.367,
+   "claude_p": 0.3,
+   "gap": "truncation is a motivated alternative, not a consequence"
+  },
+  "F6->F4": {
+   "kind": "link",
+   "p": 0.5024,
+   "raw": 0.3521,
+   "cos": 0.3079
+  },
+  "F6->B3": {
+   "kind": "link",
+   "p": 0.8309,
+   "raw": 0.4918,
+   "cos": 0.198,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "F6->B5": {
+   "kind": "link",
+   "p": 0.6521,
+   "raw": 0.5644,
+   "cos": 0.2256
+  },
+  "F6->B6": {
+   "kind": "link",
+   "p": 0.6776,
+   "raw": 0.5967,
+   "cos": 0.2711
+  },
+  "F6->B7": {
+   "kind": "link",
+   "p": 0.7437,
+   "raw": 0.5405,
+   "cos": 0.3672,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F7->G": {
+   "kind": "link",
+   "p": 0.9642,
+   "raw": 0.9793,
+   "cos": 0.6878,
+   "claude_p": 0.1,
+   "gap": "KLMN trap: a self-adjoint extension gives neither SA nor ESA on the intersection"
+  },
+  "F7->F2": {
+   "kind": "link",
+   "p": 0.8992,
+   "raw": 0.8833,
+   "cos": 0.6139
+  },
+  "F7->F4": {
+   "kind": "link",
+   "p": 0.7307,
+   "raw": 0.7228,
+   "cos": 0.6509
+  },
+  "F7->B4": {
+   "kind": "link",
+   "p": 0.9825,
+   "raw": 0.992,
+   "cos": 0.8004,
+   "claude_p": 0.15,
+   "gap": "extension is not equality; this is exactly the gap"
+  },
+  "F7->F6": {
+   "kind": "link",
+   "p": 0.561,
+   "raw": 0.4889,
+   "cos": 0.2146
+  },
+  "F7->B8": {
+   "kind": "link",
+   "p": 0.9751,
+   "raw": 0.9777,
+   "cos": 0.7299,
+   "claude_p": 0.3,
+   "gap": "the right question but no method to answer it"
+  },
+  "F8->F1": {
+   "kind": "link",
+   "p": 0.606,
+   "raw": 0.1672,
+   "cos": 0.3168
+  },
+  "F8->F3": {
+   "kind": "link",
+   "p": 0.7566,
+   "raw": 0.4843,
+   "cos": 0.5093,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F8->F5": {
+   "kind": "link",
+   "p": 0.6768,
+   "raw": 0.2594,
+   "cos": 0.2799
+  },
+  "F8->B1": {
+   "kind": "link",
+   "p": 0.5721,
+   "raw": 0.2982,
+   "cos": 0.3394
+  },
+  "F8->B2": {
+   "kind": "link",
+   "p": 0.7144,
+   "raw": 0.5458,
+   "cos": 0.5165,
+   "claude_p": 0.3,
+   "gap": "needs the same-slot bound and existence of u_M"
+  },
+  "F8->F6": {
+   "kind": "link",
+   "p": 0.6282,
+   "raw": 0.2979,
+   "cos": 0.2721
+  },
+  "F8->F9": {
+   "kind": "link",
+   "p": 0.5809,
+   "raw": 0.2545,
+   "cos": 0.554,
+   "claude_p": 0.8,
+   "gap": ""
+  },
+  "F8->B6": {
+   "kind": "link",
+   "p": 0.6428,
+   "raw": 0.4315,
+   "cos": 0.2698
+  },
+  "F8->B7": {
+   "kind": "link",
+   "p": 0.7353,
+   "raw": 0.4028,
+   "cos": 0.6111,
+   "claude_p": 0.45,
+   "gap": "handles slots 2..n only; the same-slot term still needs the AB bound"
+  },
+  "F9->F3": {
+   "kind": "link",
+   "p": 0.801,
+   "raw": 0.3351,
+   "cos": 0.5163,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F9->F5": {
+   "kind": "link",
+   "p": 0.608,
+   "raw": 0.0971,
+   "cos": 0.2155
+  },
+  "F9->B3": {
+   "kind": "link",
+   "p": 0.539,
+   "raw": 0.0541,
+   "cos": 0.2562
+  },
+  "F9->F7": {
+   "kind": "link",
+   "p": 0.5121,
+   "raw": 0.2341,
+   "cos": 0.2929
+  },
+  "F9->F8": {
+   "kind": "link",
+   "p": 0.6539,
+   "raw": 0.1665,
+   "cos": 0.554,
+   "claude_p": 0.4,
+   "gap": ""
+  },
+  "F9->F10": {
+   "kind": "link",
+   "p": 0.7162,
+   "raw": 0.2897,
+   "cos": 0.3274
+  },
+  "F9->B5": {
+   "kind": "link",
+   "p": 0.6438,
+   "raw": 0.2368,
+   "cos": 0.3042
+  },
+  "F9->B6": {
+   "kind": "link",
+   "p": 0.773,
+   "raw": 0.3732,
+   "cos": 0.327,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F9->B7": {
+   "kind": "link",
+   "p": 0.8521,
+   "raw": 0.367,
+   "cos": 0.5081,
+   "claude_p": 0.8,
+   "gap": "combine with the non-negative coset terms and Young's inequality"
+  },
+  "F10->F1": {
+   "kind": "link",
+   "p": 0.5765,
+   "raw": 0.2284,
+   "cos": 0.1753
+  },
+  "F10->F4": {
+   "kind": "link",
+   "p": 0.5065,
+   "raw": 0.3553,
+   "cos": 0.4069,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F10->F5": {
+   "kind": "link",
+   "p": 0.563,
+   "raw": 0.2642,
+   "cos": 0.2915
+  },
+  "F10->B3": {
+   "kind": "link",
+   "p": 0.6415,
+   "raw": 0.2602,
+   "cos": 0.185,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "F10->F6": {
+   "kind": "link",
+   "p": 0.7998,
+   "raw": 0.6257,
+   "cos": 0.2339,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F10->F8": {
+   "kind": "link",
+   "p": 0.5225,
+   "raw": 0.3174,
+   "cos": 0.5529,
+   "claude_p": 0.35,
+   "gap": "non-commutation motivates studying the cross term; not immediate"
+  },
+  "F10->F9": {
+   "kind": "link",
+   "p": 0.5201,
+   "raw": 0.3077,
+   "cos": 0.3274
+  },
+  "F10->B5": {
+   "kind": "link",
+   "p": 0.6439,
+   "raw": 0.555,
+   "cos": 0.3535,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "F10->B7": {
+   "kind": "link",
+   "p": 0.5973,
+   "raw": 0.375,
+   "cos": 0.2912
+  },
+  "B5->F5": {
+   "kind": "link",
+   "p": 0.6739,
+   "raw": 0.1072,
+   "cos": 0.2958
+  },
+  "B5->B1": {
+   "kind": "tree",
+   "p": 0.6428,
+   "raw": 0.1657,
+   "cos": 0.8577,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B5->B2": {
+   "kind": "link",
+   "p": 0.6521,
+   "raw": 0.2382,
+   "cos": 0.3734
+  },
+  "B5->B3": {
+   "kind": "link",
+   "p": 0.8867,
+   "raw": 0.2429,
+   "cos": 0.4351,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B5->F6": {
+   "kind": "link",
+   "p": 0.8152,
+   "raw": 0.2779,
+   "cos": 0.2256,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B5->F8": {
+   "kind": "link",
+   "p": 0.5189,
+   "raw": 0.0872,
+   "cos": 0.3281
+  },
+  "B5->F9": {
+   "kind": "link",
+   "p": 0.5846,
+   "raw": 0.1074,
+   "cos": 0.3042
+  },
+  "B5->F10": {
+   "kind": "link",
+   "p": 0.8388,
+   "raw": 0.4134,
+   "cos": 0.3535,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B5->B6": {
+   "kind": "link",
+   "p": 0.5248,
+   "raw": 0.1392,
+   "cos": 0.2797
+  },
+  "B5->B7": {
+   "kind": "link",
+   "p": 0.5005,
+   "raw": 0.0779,
+   "cos": 0.2356
+  },
+  "B6->F3": {
+   "kind": "link",
+   "p": 0.5987,
+   "raw": 0.3312,
+   "cos": 0.3491
+  },
+  "B6->B1": {
+   "kind": "link",
+   "p": 0.6477,
+   "raw": 0.391,
+   "cos": 0.3157,
+   "claude_p": 0.9,
+   "gap": ""
+  },
+  "B6->B2": {
+   "kind": "tree",
+   "p": 0.8903,
+   "raw": 0.8106,
+   "cos": 0.4859,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B6->B3": {
+   "kind": "link",
+   "p": 0.5277,
+   "raw": 0.1265,
+   "cos": 0.3413
+  },
+  "B6->F6": {
+   "kind": "link",
+   "p": 0.6362,
+   "raw": 0.3255,
+   "cos": 0.2711
+  },
+  "B6->F8": {
+   "kind": "link",
+   "p": 0.5846,
+   "raw": 0.2828,
+   "cos": 0.2698
+  },
+  "B6->F9": {
+   "kind": "link",
+   "p": 0.6843,
+   "raw": 0.3696,
+   "cos": 0.327,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B6->B5": {
+   "kind": "link",
+   "p": 0.5231,
+   "raw": 0.3328,
+   "cos": 0.2797
+  },
+  "B6->B7": {
+   "kind": "link",
+   "p": 0.7297,
+   "raw": 0.4186,
+   "cos": 0.3871,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B7->F1": {
+   "kind": "link",
+   "p": 0.5121,
+   "raw": 0.1368,
+   "cos": 0.4789
+  },
+  "B7->F3": {
+   "kind": "link",
+   "p": 0.7043,
+   "raw": 0.4543,
+   "cos": 0.6086,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B7->F4": {
+   "kind": "link",
+   "p": 0.5506,
+   "raw": 0.3136,
+   "cos": 0.3228
+  },
+  "B7->F5": {
+   "kind": "link",
+   "p": 0.5922,
+   "raw": 0.2194,
+   "cos": 0.1993
+  },
+  "B7->B2": {
+   "kind": "tree",
+   "p": 0.9544,
+   "raw": 0.9208,
+   "cos": 0.6984,
+   "claude_p": 0.8,
+   "gap": "needs F3 for the existence of u_M"
+  },
+  "B7->F8": {
+   "kind": "link",
+   "p": 0.5401,
+   "raw": 0.2573,
+   "cos": 0.6111,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B7->F9": {
+   "kind": "link",
+   "p": 0.5853,
+   "raw": 0.2868,
+   "cos": 0.5081
+  },
+  "B7->B5": {
+   "kind": "link",
+   "p": 0.6986,
+   "raw": 0.5261,
+   "cos": 0.2356
+  },
+  "B7->B6": {
+   "kind": "link",
+   "p": 0.7946,
+   "raw": 0.6536,
+   "cos": 0.3871,
+   "claude_p": 0.3,
+   "gap": ""
+  },
+  "B8->G": {
+   "kind": "link",
+   "p": 0.9623,
+   "raw": 0.9476,
+   "cos": 0.631,
+   "claude_p": 0.5,
+   "gap": "the key claim, unproven; equivalent to the goal"
+  },
+  "B8->F1": {
+   "kind": "link",
+   "p": 0.7028,
+   "raw": 0.2704,
+   "cos": 0.3516,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B8->F2": {
+   "kind": "link",
+   "p": 0.6763,
+   "raw": 0.4166,
+   "cos": 0.5217
+  },
+  "B8->F4": {
+   "kind": "link",
+   "p": 0.5293,
+   "raw": 0.3033,
+   "cos": 0.486
+  },
+  "B8->B4": {
+   "kind": "tree",
+   "p": 0.9915,
+   "raw": 0.9905,
+   "cos": 0.8747,
+   "claude_p": 0.3,
+   "gap": ""
+  },
+  "B8->F6": {
+   "kind": "link",
+   "p": 0.5544,
+   "raw": 0.2728,
+   "cos": 0.2313
+  },
+  "B8->F7": {
+   "kind": "link",
+   "p": 0.6893,
+   "raw": 0.6518,
+   "cos": 0.7299,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "F1->F4": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "F1->G": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.02,
+   "gap": "Kato-Rellich fails: no relative bound"
+  },
+  "F5->F2": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.2,
+   "gap": ""
+  },
+  "F8->F10": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B1->F2": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B2->B7": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.1,
+   "gap": ""
+  },
+  "B5->G": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.1,
+   "gap": "a lemma alone proves nothing about this T"
+  },
+  "B5->F4": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.02,
+   "gap": ""
+  },
+  "B6->G": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.75,
+   "gap": "f arbitrary gives Ran(T+1)=H_n; then the range criterion"
+  },
+  "B6->B4": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.05,
+   "gap": ""
+  },
+  "B6->B8": {
+   "kind": "link",
+   "p": 0.0,
+   "claude_p": 0.05,
+   "gap": ""
+  }
+ },
+ "bridges": {},
+ "centre": {
+  "col": {
+   "S": -0.2349,
+   "G": -0.2891,
+   "F1": -1.7977,
+   "F2": -1.018,
+   "F3": -0.9585,
+   "F4": -0.8935,
+   "F5": -1.5497,
+   "B1": -0.9077,
+   "B2": -0.4949,
+   "B3": -1.8986,
+   "B4": -0.0615,
+   "F6": -1.1432,
+   "F7": -0.1145,
+   "F8": -1.1278,
+   "F9": -1.163,
+   "F10": -0.7034,
+   "B5": -0.6433,
+   "B6": -0.625,
+   "B7": -1.1771,
+   "B8": -0.7389
+  },
+  "row": {
+   "S": 0.1764,
+   "G": 0.342,
+   "F1": -1.5329,
+   "F2": -0.5321,
+   "F3": -1.0022,
+   "F4": -0.665,
+   "F5": -1.2519,
+   "B1": -1.1859,
+   "B2": -0.5825,
+   "B3": -1.3184,
+   "B4": -0.5478,
+   "F6": -0.603,
+   "F7": -0.0232,
+   "F8": -1.1155,
+   "F9": -1.9961,
+   "F10": -0.6051,
+   "B5": -2.1732,
+   "B6": -1.0215,
+   "B7": -0.9698,
+   "B8": -0.9326
+  },
+  "grand": -0.877
+ },
+ "judge": "claude"
+}

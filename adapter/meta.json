@@ -1,0 +1,28 @@
+{
+ "rank": 16,
+ "top": 28,
+ "temperature": 2.4276205768453867,
+ "at": "step 21000",
+ "base": {
+  "val_auc": 0.5712058233229893,
+  "val_auc_collar": 0.4578231292517007,
+  "val_auc_general": 0.5724829560942434,
+  "val_auc_vs_start-goal": 0.38510003968608864,
+  "val_auc_vs_trap": 0.4386223798551963,
+  "val_auc_vs_reverse": 0.5012867292881104,
+  "val_auc_vs_skip2+": 0.5528924470897927,
+  "val_auc_vs_cross": 0.6896295080770142,
+  "blind_bd_auc": 0.47208333333333335
+ },
+ "result": {
+  "val_auc": 0.8696533946001698,
+  "val_auc_collar": 0.7825222396650968,
+  "val_auc_general": 0.8705093757083477,
+  "val_auc_vs_start-goal": 0.9481779799967208,
+  "val_auc_vs_trap": 0.6825752280356573,
+  "val_auc_vs_reverse": 0.8352629769700634,
+  "val_auc_vs_skip2+": 0.8296592151751611,
+  "val_auc_vs_cross": 0.9528203432732685,
+  "blind_bd_auc": 0.73875
+ }
+}

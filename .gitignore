@@ -1,0 +1,2 @@
+# Files excluded automatically: exceed GitHub's 100MB per-file limit (no LFS installed)
+.venv/lib/python3.12/site-packages/torch/lib/libtorch_cpu.dylib

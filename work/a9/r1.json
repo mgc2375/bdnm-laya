@@ -1,0 +1,12 @@
+[
+ {"from":"S","text":"Compute the modular data of (M_T, Omega) on the vacuum, one- and two-particle spaces: Delta^{it} = U(0, -2 pi t) and J_{M_T} = J on H_0 + H_1 + H_2"},
+ {"from":"S","text":"Build n-particle vectors as products of the fields chi(xi), chi'(eta) applied to Omega and prove the Tomita relation inductively in the particle number k"},
+ {"from":"S","text":"Apply the Buchholz-Lechner / Alazzawi-Lechner Bisognano-Wichmann theorem for wedge-local fields"},
+ {"from":"S","text":"Apply Mund's theorem that Bisognano-Wichmann follows from the particle structure of a local net"},
+ {"from":"S","text":"Prove the Haag-Ruelle out-states at level n are sqrt(n!) P_n(slowest x ... x fastest) for all n, identifying the scattering states"},
+ {"from":"S","text":"Verify the formal Tomita identity S_M = S_0 numerically at particle degrees 4 and 5"},
+ {"from":"G","side":"bwd","text":"V(t) = U(0, -2 pi t) Delta_{M_T}^{-it} and I = J_{M_T} J act as the identity on every vector of H"},
+ {"from":"G","side":"bwd","text":"The standard subspace of M_T is contained in the free standard subspace H_0, equivalently {S_M = S_0} is dense"},
+ {"from":"G","side":"bwd","text":"Bisognano-Wichmann holds on the closed span of all scattering states and that span is all of H"},
+ {"from":"G","side":"bwd","text":"Modular nuclearity of the map M_T(x) -> Delta^{1/4} M Omega holds for all wedge translations x"}
+]

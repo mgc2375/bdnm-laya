@@ -1,0 +1,11 @@
+[
+ {"from":"S","text":"Assume for contradiction that the square root of 2 equals p/q with p and q integers and q not zero"},
+ {"from":"S","text":"Recall the rational root theorem for polynomials with integer coefficients"},
+ {"from":"S","text":"Recall the fundamental theorem of arithmetic: every integer has a unique prime factorisation"},
+ {"from":"S","text":"Compute the decimal expansion of the square root of 2 to many digits"},
+ {"from":"S","text":"Note that 1.4 squared is less than 2 and 1.5 squared is more than 2"},
+ {"from":"G","side":"bwd","text":"A contradiction follows from assuming the square root of 2 is p/q in lowest terms"},
+ {"from":"G","side":"bwd","text":"The equation x squared minus 2 equals 0 has no rational roots"},
+ {"from":"G","side":"bwd","text":"In p squared = 2 q squared, the prime 2 appears an even number of times on the left and an odd number of times on the right"},
+ {"from":"G","side":"bwd","text":"There is no smallest positive integer q for which q times the square root of 2 is an integer"}
+]

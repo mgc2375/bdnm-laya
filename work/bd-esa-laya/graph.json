@@ -1,0 +1,721 @@
+{
+ "problem": "Essential self-adjointness of chi(xi) + chi'(eta) for the Bullough-Dodd S-matrix",
+ "nodes": {
+  "S": {
+   "text": "Known for every n: chi_n(xi) = n P_n A_1^2 P_n and chi'_n(eta) = n P_n B_n^2 P_n are each positive self-adjoint on H_n intersected with Dom(A_1^2), resp. Dom(B_n^2) (Theorem A_n), and AB is bounded (Tanimoto)",
+   "side": "start",
+   "depth": 0
+  },
+  "G": {
+   "text": "Proven: the sum chi_n(xi) + chi'_n(eta) is self-adjoint on the intersection of their domains for every n, so (HA-T) holds for the Bullough-Dodd S-matrix at B = 1/2",
+   "side": "goal",
+   "depth": 0
+  },
+  "F1": {
+   "text": "Try Kato-Rellich: show chi'_n(eta) is relatively bounded by chi_n(xi) with relative bound less than 1",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F2": {
+   "text": "Take the KLMN form sum of the two positive operators chi_n(xi) and chi'_n(eta)",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F3": {
+   "text": "Truncate one side: replace B_n^2 by the bounded operator min(B_n^2, M), so Z_A + Z_{B,M} is self-adjoint by bounded perturbation",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F4": {
+   "text": "Check whether chi_n(xi) and chi'_n(eta) strongly commute, so their sum is self-adjoint by joint spectral calculus",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "F5": {
+   "text": "Apply Nelson's commutator theorem with a comparison operator such as the n-particle number or dilation generator",
+   "side": "fwd",
+   "parent": "S",
+   "depth": 1
+  },
+  "B1": {
+   "text": "The sum T is a positive symmetric operator with Ran(T + 1) equal to all of H_n",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B2": {
+   "text": "For every f in H_n there are u_M with (Z_A + Z_{B,M} + 1) u_M = f and bounds on ||Z_A u_M|| and ||Z_{B,M} u_M|| uniform in M",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B3": {
+   "text": "The adjoint equation T* v = -v has only the solution v = 0",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "B4": {
+   "text": "The form sum of chi_n(xi) and chi'_n(eta) has operator domain equal to the intersection of their domains",
+   "side": "bwd",
+   "parent": "G",
+   "depth": 1
+  },
+  "F6": {
+   "text": "No relative bound exists: both are unbounded analytic shifts in opposite imaginary directions, so neither controls the other",
+   "side": "fwd",
+   "parent": "F1",
+   "depth": 2
+  },
+  "F7": {
+   "text": "The form sum is a self-adjoint operator extending chi_n(xi) + chi'_n(eta) on the intersection domain",
+   "side": "fwd",
+   "parent": "F2",
+   "depth": 2
+  },
+  "F8": {
+   "text": "Expand the cross term <Z_A u, Z_{B,M} u> over cosets of S_n: B acting on slots 2 to n commutes with A_1^2, giving a non-negative contribution",
+   "side": "fwd",
+   "parent": "F3",
+   "depth": 2
+  },
+  "F9": {
+   "text": "Bound the same-slot cross term by c ||A_1 u|| ||min(B_n, sqrt M) u|| using that AB is bounded",
+   "side": "fwd",
+   "parent": "F3",
+   "depth": 2
+  },
+  "F10": {
+   "text": "They do not commute: the S-symmetrisation P_n couples slot 1 to slot n",
+   "side": "fwd",
+   "parent": "F4",
+   "depth": 2
+  },
+  "B5": {
+   "text": "A positive symmetric operator T with Ran(T + 1) = H is self-adjoint",
+   "side": "bwd",
+   "parent": "B1",
+   "depth": 2
+  },
+  "B6": {
+   "text": "Pass to weak limits as M goes to infinity: u_M converges to u in the domain with (T + 1) u = f",
+   "side": "bwd",
+   "parent": "B2",
+   "depth": 2
+  },
+  "B7": {
+   "text": "2 Re <Z_A u, Z_{B,M} u> is bounded below by -eps ||Z_A u||^2 - C ||u||^2, uniformly in M",
+   "side": "bwd",
+   "parent": "B2",
+   "depth": 2
+  },
+  "B8": {
+   "text": "Show the form sum's operator domain equals Dom chi_n(xi) intersected with Dom chi'_n(eta)",
+   "side": "bwd",
+   "parent": "B4",
+   "depth": 2
+  }
+ },
+ "edges": {
+  "S->F1": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.6344,
+   "cos": 0.6072
+  },
+  "S->F2": {
+   "kind": "tree",
+   "p": 0.3477,
+   "raw": 0.3477,
+   "cos": 0.5637
+  },
+  "S->F3": {
+   "kind": "tree",
+   "p": 0.5479,
+   "raw": 0.5479,
+   "cos": 0.5236
+  },
+  "S->F4": {
+   "kind": "tree",
+   "p": 0.5602,
+   "raw": 0.5602,
+   "cos": 0.6175
+  },
+  "S->F5": {
+   "kind": "tree",
+   "p": 0.3876,
+   "raw": 0.3876,
+   "cos": 0.3448
+  },
+  "S->B1": {
+   "kind": "link",
+   "p": 0.4336,
+   "raw": 0.4336,
+   "cos": 0.4115
+  },
+  "S->B2": {
+   "kind": "link",
+   "p": 0.6432,
+   "raw": 0.6432,
+   "cos": 0.527
+  },
+  "S->B4": {
+   "kind": "link",
+   "p": 0.7067,
+   "raw": 0.7067,
+   "cos": 0.5897
+  },
+  "S->F6": {
+   "kind": "link",
+   "p": 0.6285,
+   "raw": 0.6285,
+   "cos": 0.3262
+  },
+  "S->F7": {
+   "kind": "link",
+   "p": 0.4532,
+   "raw": 0.4532,
+   "cos": 0.5602
+  },
+  "S->F8": {
+   "kind": "link",
+   "p": 0.391,
+   "raw": 0.391,
+   "cos": 0.4324
+  },
+  "S->F9": {
+   "kind": "link",
+   "p": 0.5947,
+   "raw": 0.5947,
+   "cos": 0.4959
+  },
+  "S->F10": {
+   "kind": "link",
+   "p": 0.4511,
+   "raw": 0.4511,
+   "cos": 0.3224
+  },
+  "S->B8": {
+   "kind": "link",
+   "p": 0.6084,
+   "raw": 0.6084,
+   "cos": 0.5767
+  },
+  "F1->F2": {
+   "kind": "link",
+   "p": 0.4423,
+   "raw": 0.4423,
+   "cos": 0.4876
+  },
+  "F1->F3": {
+   "kind": "link",
+   "p": 0.3852,
+   "raw": 0.3852,
+   "cos": 0.4136
+  },
+  "F1->F5": {
+   "kind": "link",
+   "p": 0.3503,
+   "raw": 0.3503,
+   "cos": 0.259
+  },
+  "F1->B2": {
+   "kind": "link",
+   "p": 0.5358,
+   "raw": 0.5358,
+   "cos": 0.3247
+  },
+  "F1->B4": {
+   "kind": "link",
+   "p": 0.5256,
+   "raw": 0.5256,
+   "cos": 0.4006
+  },
+  "F1->F6": {
+   "kind": "tree",
+   "p": 0.6339,
+   "raw": 0.6339,
+   "cos": 0.3952
+  },
+  "F1->F7": {
+   "kind": "link",
+   "p": 0.5032,
+   "raw": 0.5032,
+   "cos": 0.3481
+  },
+  "F1->F9": {
+   "kind": "link",
+   "p": 0.4186,
+   "raw": 0.4186,
+   "cos": 0.3583
+  },
+  "F1->B8": {
+   "kind": "link",
+   "p": 0.7716,
+   "raw": 0.7716,
+   "cos": 0.3516
+  },
+  "F2->F4": {
+   "kind": "link",
+   "p": 0.3728,
+   "raw": 0.3728,
+   "cos": 0.5709
+  },
+  "F2->F5": {
+   "kind": "link",
+   "p": 0.3659,
+   "raw": 0.3659,
+   "cos": 0.3515
+  },
+  "F2->B1": {
+   "kind": "link",
+   "p": 0.4771,
+   "raw": 0.4771,
+   "cos": 0.4869
+  },
+  "F2->B4": {
+   "kind": "link",
+   "p": 0.4879,
+   "raw": 0.4879,
+   "cos": 0.6185
+  },
+  "F2->F7": {
+   "kind": "tree",
+   "p": 0.7735,
+   "raw": 0.7735,
+   "cos": 0.6139
+  },
+  "F2->B8": {
+   "kind": "link",
+   "p": 0.754,
+   "raw": 0.754,
+   "cos": 0.5217
+  },
+  "F3->G": {
+   "kind": "link",
+   "p": 0.4767,
+   "raw": 0.4767,
+   "cos": 0.4693
+  },
+  "F3->F2": {
+   "kind": "link",
+   "p": 0.4241,
+   "raw": 0.4241,
+   "cos": 0.4041
+  },
+  "F3->F5": {
+   "kind": "link",
+   "p": 0.4433,
+   "raw": 0.4433,
+   "cos": 0.3725
+  },
+  "F3->B1": {
+   "kind": "link",
+   "p": 0.3737,
+   "raw": 0.3737,
+   "cos": 0.3656
+  },
+  "F3->B2": {
+   "kind": "link",
+   "p": 0.6745,
+   "raw": 0.6745,
+   "cos": 0.5236
+  },
+  "F3->F6": {
+   "kind": "link",
+   "p": 0.4365,
+   "raw": 0.4365,
+   "cos": 0.367
+  },
+  "F3->F7": {
+   "kind": "link",
+   "p": 0.4315,
+   "raw": 0.4315,
+   "cos": 0.3879
+  },
+  "F3->F8": {
+   "kind": "tree",
+   "p": 0.4109,
+   "raw": 0.4109,
+   "cos": 0.5093
+  },
+  "F3->F9": {
+   "kind": "tree",
+   "p": 0.5876,
+   "raw": 0.5876,
+   "cos": 0.5163
+  },
+  "F4->F1": {
+   "kind": "link",
+   "p": 0.4947,
+   "raw": 0.4947,
+   "cos": 0.491
+  },
+  "F4->F5": {
+   "kind": "link",
+   "p": 0.4454,
+   "raw": 0.4454,
+   "cos": 0.3312
+  },
+  "F4->B1": {
+   "kind": "link",
+   "p": 0.4425,
+   "raw": 0.4425,
+   "cos": 0.3656
+  },
+  "F4->B4": {
+   "kind": "link",
+   "p": 0.3675,
+   "raw": 0.3675,
+   "cos": 0.5544
+  },
+  "F4->F6": {
+   "kind": "link",
+   "p": 0.3615,
+   "raw": 0.3615,
+   "cos": 0.3079
+  },
+  "F4->F7": {
+   "kind": "link",
+   "p": 0.5886,
+   "raw": 0.5886,
+   "cos": 0.6509
+  },
+  "F4->F8": {
+   "kind": "link",
+   "p": 0.3722,
+   "raw": 0.3722,
+   "cos": 0.4328
+  },
+  "F4->F10": {
+   "kind": "tree",
+   "p": 0.6914,
+   "raw": 0.6914,
+   "cos": 0.4069
+  },
+  "F4->B8": {
+   "kind": "link",
+   "p": 0.5959,
+   "raw": 0.5959,
+   "cos": 0.486
+  },
+  "F5->B4": {
+   "kind": "link",
+   "p": 0.3449,
+   "raw": 0.3449,
+   "cos": 0.3117
+  },
+  "B1->G": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.2313,
+   "cos": 0.4483
+  },
+  "B1->F5": {
+   "kind": "link",
+   "p": 0.4402,
+   "raw": 0.4402,
+   "cos": 0.3126
+  },
+  "B1->B2": {
+   "kind": "link",
+   "p": 0.663,
+   "raw": 0.663,
+   "cos": 0.4384
+  },
+  "B1->F7": {
+   "kind": "link",
+   "p": 0.4611,
+   "raw": 0.4611,
+   "cos": 0.4121
+  },
+  "B1->F10": {
+   "kind": "link",
+   "p": 0.4263,
+   "raw": 0.4263,
+   "cos": 0.3104
+  },
+  "B1->B8": {
+   "kind": "link",
+   "p": 0.4493,
+   "raw": 0.4493,
+   "cos": 0.3357
+  },
+  "B2->G": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.0554,
+   "cos": 0.4412
+  },
+  "B2->F6": {
+   "kind": "link",
+   "p": 0.6015,
+   "raw": 0.6015,
+   "cos": 0.3465
+  },
+  "B2->F8": {
+   "kind": "link",
+   "p": 0.3473,
+   "raw": 0.3473,
+   "cos": 0.5165
+  },
+  "B2->F9": {
+   "kind": "link",
+   "p": 0.4641,
+   "raw": 0.4641,
+   "cos": 0.439
+  },
+  "B2->B6": {
+   "kind": "link",
+   "p": 0.4989,
+   "raw": 0.4989,
+   "cos": 0.4859
+  },
+  "B3->G": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.1209,
+   "cos": 0.3593
+  },
+  "B4->G": {
+   "kind": "tree",
+   "p": 0.3469,
+   "raw": 0.3469,
+   "cos": 0.6786
+  },
+  "B4->B1": {
+   "kind": "link",
+   "p": 0.539,
+   "raw": 0.539,
+   "cos": 0.4431
+  },
+  "B4->F6": {
+   "kind": "link",
+   "p": 0.3943,
+   "raw": 0.3943,
+   "cos": 0.2477
+  },
+  "B4->F7": {
+   "kind": "link",
+   "p": 0.6998,
+   "raw": 0.6998,
+   "cos": 0.8004
+  },
+  "B4->B8": {
+   "kind": "link",
+   "p": 0.6226,
+   "raw": 0.6226,
+   "cos": 0.8747
+  },
+  "F6->F2": {
+   "kind": "link",
+   "p": 0.3466,
+   "raw": 0.3466,
+   "cos": 0.2087
+  },
+  "F6->F5": {
+   "kind": "link",
+   "p": 0.3653,
+   "raw": 0.3653,
+   "cos": 0.2213
+  },
+  "F8->F9": {
+   "kind": "link",
+   "p": 0.5808,
+   "raw": 0.5808,
+   "cos": 0.554
+  },
+  "F8->B7": {
+   "kind": "link",
+   "p": 0.4678,
+   "raw": 0.4678,
+   "cos": 0.6111
+  },
+  "F9->F6": {
+   "kind": "link",
+   "p": 0.3989,
+   "raw": 0.3989,
+   "cos": 0.3293
+  },
+  "F9->B7": {
+   "kind": "link",
+   "p": 0.5537,
+   "raw": 0.5537,
+   "cos": 0.5081
+  },
+  "F10->F5": {
+   "kind": "link",
+   "p": 0.5295,
+   "raw": 0.5295,
+   "cos": 0.2915
+  },
+  "F10->B2": {
+   "kind": "link",
+   "p": 0.4354,
+   "raw": 0.4354,
+   "cos": 0.2888
+  },
+  "F10->F6": {
+   "kind": "link",
+   "p": 0.4295,
+   "raw": 0.4295,
+   "cos": 0.2339
+  },
+  "F10->F8": {
+   "kind": "link",
+   "p": 0.4968,
+   "raw": 0.4968,
+   "cos": 0.5529
+  },
+  "B5->B1": {
+   "kind": "tree",
+   "p": 0.4877,
+   "raw": 0.4877,
+   "cos": 0.8577
+  },
+  "B6->F3": {
+   "kind": "link",
+   "p": 0.372,
+   "raw": 0.372,
+   "cos": 0.3491
+  },
+  "B6->B1": {
+   "kind": "link",
+   "p": 0.4783,
+   "raw": 0.4783,
+   "cos": 0.3157
+  },
+  "B6->B2": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.1392,
+   "cos": 0.4859
+  },
+  "B6->F6": {
+   "kind": "link",
+   "p": 0.4061,
+   "raw": 0.4061,
+   "cos": 0.2711
+  },
+  "B6->F8": {
+   "kind": "link",
+   "p": 0.4704,
+   "raw": 0.4704,
+   "cos": 0.2698
+  },
+  "B6->F9": {
+   "kind": "link",
+   "p": 0.4569,
+   "raw": 0.4569,
+   "cos": 0.327
+  },
+  "B6->B5": {
+   "kind": "link",
+   "p": 0.4178,
+   "raw": 0.4178,
+   "cos": 0.2797
+  },
+  "B7->F3": {
+   "kind": "link",
+   "p": 0.5249,
+   "raw": 0.5249,
+   "cos": 0.6086
+  },
+  "B7->B2": {
+   "kind": "tree",
+   "p": 0.5205,
+   "raw": 0.5205,
+   "cos": 0.6984
+  },
+  "B7->F6": {
+   "kind": "link",
+   "p": 0.5315,
+   "raw": 0.5315,
+   "cos": 0.3672
+  },
+  "B7->B6": {
+   "kind": "link",
+   "p": 0.4462,
+   "raw": 0.4462,
+   "cos": 0.3871
+  },
+  "B8->F5": {
+   "kind": "link",
+   "p": 0.3722,
+   "raw": 0.3722,
+   "cos": 0.2274
+  },
+  "B8->B4": {
+   "kind": "tree",
+   "p": 0.0,
+   "raw": 0.202,
+   "cos": 0.8747
+  },
+  "B8->F6": {
+   "kind": "link",
+   "p": 0.3818,
+   "raw": 0.3818,
+   "cos": 0.2313
+  },
+  "B8->F7": {
+   "kind": "link",
+   "p": 0.3774,
+   "raw": 0.3774,
+   "cos": 0.7299
+  }
+ },
+ "bridges": {},
+ "technical": true,
+ "centre": {
+  "col": {
+   "S": -1.5215,
+   "G": -1.4363,
+   "F1": -1.6066,
+   "F2": -1.2218,
+   "F3": -1.2191,
+   "F4": -1.428,
+   "F5": -0.9259,
+   "B1": -0.8165,
+   "B2": -0.9631,
+   "B3": -1.9991,
+   "B4": -1.1966,
+   "F6": -0.6807,
+   "F7": -0.9046,
+   "F8": -1.1846,
+   "F9": -1.4076,
+   "F10": -1.6119,
+   "B5": -1.371,
+   "B6": -2.8924,
+   "B7": -2.2633,
+   "B8": -0.9345
+  },
+  "row": {
+   "S": -0.3781,
+   "G": -0.7331,
+   "F1": -0.6731,
+   "F2": -0.9879,
+   "F3": -0.6802,
+   "F4": -0.8228,
+   "F5": -1.5134,
+   "B1": -1.1232,
+   "B2": -1.5349,
+   "B3": -2.4788,
+   "B4": -1.6058,
+   "F6": -1.2095,
+   "F7": -1.6901,
+   "F8": -1.6078,
+   "F9": -1.9223,
+   "F10": -1.3511,
+   "B5": -2.3333,
+   "B6": -1.6042,
+   "B7": -1.901,
+   "B8": -1.4346
+  },
+  "grand": -1.3793
+ },
+ "min_p": 0.3414
+}

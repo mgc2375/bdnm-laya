@@ -1,0 +1,16 @@
+{
+ "rank": 16,
+ "top": 8,
+ "temperature": 0.3,
+ "epoch": 3,
+ "base": {},
+ "result": {
+  "val_auc": 0.6661693566616935,
+  "val_auc_vs_start-goal": 0.702054794520548,
+  "val_auc_vs_trap": 0.7587849910661107,
+  "val_auc_vs_reverse": 0.5132294989679115,
+  "val_auc_vs_skip2+": 0.6857279388340236,
+  "val_auc_vs_cross": 0.7528617001313568,
+  "blind_bd_auc": 0.56
+ }
+}
